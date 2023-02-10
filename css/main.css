@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .text h1 {
@@ -41,12 +41,13 @@ body {
     color: hsl(234, 12%, 34%);
     font-weight: 600;
     font-size: 2.2rem;
+    line-height: 2rem;
 }
 
 .text .text-pragraph {
     color: hsl(229, 6%, 66%);
     padding-top: 1rem;
-    max-width: 30rem;
+    max-width: 34rem;
     text-align: center;
 }
 
