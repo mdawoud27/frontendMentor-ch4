@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.container {
+    /* border: 1px solid red; */
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.text {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.text h1 {
+    color: hsl(229, 6%, 66%);
+    font-weight: 200;
+    font-size: 2.2rem;
+}
+
+.text h2 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.text .text-pragraph {
+    color: hsl(229, 6%, 66%);
+    padding-top: 1rem;
+    max-width: 30rem;
+    text-align: center;
+}
+
+.cards {
+    /* border: 1px solid blue; */
+    margin: 1.5rem;
+    min-width: calc(100vw / 4);
+    display: grid;
+    grid-template-areas: 
+    ".  .   .  .  c2 c2 c2 c2  .  .  .  ."
+    ".  .   .  .  c2 c2 c2 c2  .  .  .  ."
+    "c1 c1 c1 c1  c2 c2 c2 c2  c4 c4 c4 c4"
+    "c1 c1 c1 c1  c2 c2 c2 c2  c4 c4 c4 c4"
+    "c1 c1 c1 c1  c3 c3 c3 c3  c4 c4 c4 c4"
+    "c1 c1 c1 c1  c3 c3 c3 c3  c4 c4 c4 c4"
+    ".  .   .  .  c3 c3 c3 c3  .  .  .   ."
+    ".  .   .  .  c3 c3 c3 c3  .  .  .   .";
+    gap: 2rem;
+}
+
+.c1 { 
+    grid-area: c1;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+.c2 { 
+    grid-area: c2;
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+.c3 { 
+    grid-area: c3;
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+.c4 { 
+    grid-area: c4;
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.cards .card {
+    /* border: 1px solid green; */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 23rem;
+    box-shadow: 3px 12px 25px -13px #4e564c;
+}
+
+.card .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.card .card-text h3 {
+    color: hsl(234, 12%, 34%);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card .card-text p {
+    color: hsl(229, 6%, 66%);
+    padding: 1rem 0 4rem 0;
+    line-height: 1.7rem;
+}
+
+.pic {
+    display: flex;
+    justify-content: flex-end;
+}
+.cards .card img {
+    width: 4rem;
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 1rem;
+    }
+    .text {
+        max-width: 20rem;
+    }
+    .text h1, .text h2 {
+        /* color: blue; */
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+        text-align: center;
+    }
+    .text .text-pragraph {
+        max-width: 20rem;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+    }
+    .cards .card {
+        max-width: 20rem;
+    }
+}
+
+@media (max-width: 775px) {
+    .container {
+        padding: 1rem;
+    }
+    .text {
+        max-width: 23rem;
+    }
+    .text h1, .text h2 {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+    }
+}
